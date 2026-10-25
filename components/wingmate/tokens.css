@@ -1,0 +1,30 @@
+@font-face{font-family:"Cathay Sans";font-weight:300;src:local("Cathay Sans Light"),local("CathaySans-Light")}
+@font-face{font-family:"Cathay Sans";font-weight:400;src:local("Cathay Sans"),local("CathaySans-Regular")}
+@font-face{font-family:"Cathay Sans";font-weight:500;src:local("Cathay Sans Medium"),local("CathaySans-Medium")}
+
+.wm-auth,
+.wm-app {
+  --wm-jade:#006564;
+  --wm-medium-jade:#367D79;
+  --wm-light-jade:#5E967E;
+  --wm-sand:#C1B49A;
+  --wm-light-sand:#DCD3BC;
+  --wm-slate:#C6C2C1;
+  --wm-light-slate:#EBEDEC;
+  --wm-saffron:#C2262E;
+  --wm-white:#fff;
+  --wm-ink:#1b2626;
+  --wm-muted:#4d5a5a;
+  --wm-line:#dfe3e2;
+  --wm-tint:#e6f0ef;
+  --wm-radius:10px;
+  --wm-font:"Cathay Sans","Aktiv Grotesk","Helvetica Neue",Helvetica,Arial,"Noto Sans",sans-serif;
+
+  font-family:var(--wm-font);
+  font-weight:400;
+  color:var(--wm-ink);
+  -webkit-font-smoothing:antialiased;
+}
+.wm-auth *, .wm-app * { box-sizing:border-box; }
+.wm-auth [hidden], .wm-app [hidden] { display:none !important; }
+.wm-auth ::placeholder, .wm-app ::placeholder { color:#6b7777; opacity:1; }

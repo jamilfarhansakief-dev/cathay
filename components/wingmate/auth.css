@@ -1,0 +1,84 @@
+.wm-auth{background:var(--wm-white);min-height:100vh}
+.wm-auth .page{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:100vh}
+
+/* Left: hero */
+.wm-auth .hero{position:relative;overflow:hidden;color:var(--wm-white);background:linear-gradient(180deg,#00706f 0%,var(--wm-jade) 45%,#004a49 100%);display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:40px 48px}
+.wm-auth .lockup{position:relative;z-index:2;display:flex;align-items:baseline;gap:22px}
+.wm-auth .lockup .cx-logo{height:36px;width:auto;display:block;flex:none}
+.wm-auth .lockup .divider{width:1.5px;height:36px;background:rgba(255,255,255,.85);flex:none}
+.wm-auth .lockup .app-name{font-size:22px;font-weight:500;letter-spacing:.01em;color:var(--wm-white);line-height:1;position:relative;top:-2px}
+.wm-auth .photo{position:relative;z-index:1;margin:0 -48px;flex:none}
+.wm-auth .photo img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.wm-auth .hero-copy{position:relative;z-index:2;max-width:500px}
+.wm-auth .hero-copy h2{font-size:clamp(28px,3.2vw,42px);line-height:1.12;font-weight:500;letter-spacing:-.01em;color:var(--wm-white)}
+.wm-auth .hero-copy p{margin-top:14px;font-size:16.5px;line-height:1.55;color:var(--wm-white);font-weight:300}
+.wm-auth .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.wm-auth .chips span{font-size:13.5px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.6);color:var(--wm-white)}
+
+/* Right: form */
+.wm-auth .panel{display:flex;align-items:center;justify-content:center;padding:40px 24px;background:var(--wm-white)}
+.wm-auth .card{width:100%;max-width:440px}
+.wm-auth .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--wm-jade);font-weight:500}
+.wm-auth h1{font-size:30px;font-weight:500;margin-top:8px;letter-spacing:-.01em;color:var(--wm-ink)}
+.wm-auth .sub{color:var(--wm-muted);margin-top:8px;font-size:15px;line-height:1.5}
+.wm-auth form{margin-top:26px;display:grid;gap:16px}
+.wm-auth .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wm-auth .field{display:grid;gap:6px}
+.wm-auth label{font-size:13.5px;font-weight:500;color:var(--wm-ink)}
+.wm-auth .control{position:relative;display:flex}
+
+.wm-auth :is(input[type=text],input[type=email],input[type=tel],input[type=password],input[type=date],select){
+  width:100%;height:46px;padding:0 14px;font:inherit;font-size:15px;color:var(--wm-ink);
+  background-color:var(--wm-white);border:1.5px solid #9aa4a4;border-radius:var(--wm-radius);outline:none;
+  transition:border-color .15s,box-shadow .15s}
+.wm-auth :is(input,select):focus{border-color:var(--wm-jade);box-shadow:0 0 0 3px rgba(0,101,100,.18)}
+.wm-auth .field.error :is(input,select){border-color:var(--wm-saffron)}
+.wm-auth .msg{font-size:13px;color:var(--wm-saffron);display:none}
+.wm-auth .field.error .msg{display:block}
+
+.wm-auth .phone{display:grid;grid-template-columns:112px 1fr;gap:8px}
+.wm-auth select{appearance:none;padding-right:26px;background-image:linear-gradient(45deg,transparent 50%,var(--wm-muted) 50%),linear-gradient(135deg,var(--wm-muted) 50%,transparent 50%);background-position:calc(100% - 16px) 20px,calc(100% - 11px) 20px;background-size:5px 5px;background-repeat:no-repeat}
+
+.wm-auth .toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--wm-jade);font:inherit;font-size:13.5px;font-weight:500;padding:8px;cursor:pointer;border-radius:6px}
+.wm-auth .toggle:hover{background:var(--wm-light-slate)}
+.wm-auth .control input.pw{padding-right:64px}
+
+.wm-auth .meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:2px}
+.wm-auth .meter i{height:4px;border-radius:4px;background:var(--wm-slate)}
+.wm-auth .meter[data-s="1"] i:nth-child(-n+1){background:var(--wm-saffron)}
+.wm-auth .meter[data-s="2"] i:nth-child(-n+2){background:var(--wm-sand)}
+.wm-auth .meter[data-s="3"] i:nth-child(-n+3){background:var(--wm-light-jade)}
+.wm-auth .meter[data-s="4"] i:nth-child(-n+4){background:var(--wm-jade)}
+.wm-auth .hint{font-size:13px;color:var(--wm-muted)}
+
+.wm-auth .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;font-weight:400}
+.wm-auth .check input{margin-top:3px;width:18px;height:18px;accent-color:var(--wm-jade);flex:none}
+.wm-auth .check a{color:var(--wm-jade);font-weight:500}
+.wm-auth .field.error .check{color:var(--wm-saffron)}
+
+.wm-auth .btn{height:50px;border:0;border-radius:var(--wm-radius);background:var(--wm-jade);color:var(--wm-white);font:inherit;font-size:16px;font-weight:500;cursor:pointer;transition:background .15s,transform .05s}
+.wm-auth .btn:hover{background:var(--wm-medium-jade)}
+.wm-auth .btn:active{transform:translateY(1px)}
+.wm-auth .btn:disabled{opacity:.6;cursor:default}
+.wm-auth .btn:focus-visible{outline:3px solid rgba(0,101,100,.35);outline-offset:2px}
+.wm-auth .alt{text-align:center;font-size:14.5px;color:var(--wm-muted)}
+.wm-auth .alt a{color:var(--wm-jade);font-weight:500;text-decoration:none}
+
+/* Login extras */
+.wm-auth .label-row{display:flex;justify-content:space-between;align-items:baseline}
+.wm-auth .label-row a{font-size:13.5px;font-weight:500;color:var(--wm-jade);text-decoration:none}
+.wm-auth .label-row a:hover{text-decoration:underline}
+.wm-auth .banner{display:none;padding:11px 14px;border-radius:var(--wm-radius);background:#fbeaea;border:1px solid var(--wm-saffron);color:#7d1118;font-size:14px;line-height:1.4}
+.wm-auth .banner.show{display:block}
+
+@media (max-width:880px){
+  .wm-auth .page{grid-template-columns:1fr}
+  .wm-auth .hero{padding:24px;gap:8px}
+  .wm-auth .photo{margin:0 -24px}
+  .wm-auth .hero-copy{display:none}
+  .wm-auth .lockup{gap:14px}
+  .wm-auth .lockup .cx-logo{height:24px}
+  .wm-auth .lockup .divider{height:24px}
+  .wm-auth .lockup .app-name{font-size:15px;top:-1.3px}
+  .wm-auth .panel{padding:28px 20px 40px}
+}
