@@ -155,7 +155,7 @@ export default function PreferencesForm({
         visible={visibility.travellerType}
         onVisibleChange={(v) => setVis("travellerType", v)}
       >
-        <Select value={travellerType} onValueChange={setTravellerType}>
+        <Select value={travellerType} onValueChange={setTravellerType(val ?? "")}>
           <SelectTrigger>
             <SelectValue placeholder="Select one" />
           </SelectTrigger>
@@ -227,7 +227,7 @@ export default function PreferencesForm({
         visible={visibility.stayAwake}
         onVisibleChange={(v) => setVis("stayAwake", v)}
       >
-        <Select value={stayAwake} onValueChange={setStayAwake}>
+        <Select value={stayAwake} onValueChange={setStayAwake(val ?? "")}>
           <SelectTrigger>
             <SelectValue placeholder="Select one" />
           </SelectTrigger>
